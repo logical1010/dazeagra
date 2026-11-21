@@ -2,108 +2,149 @@
 <html lang="en" data-theme="violet">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Special Offer</title>
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;800&family=Outfit:wght@300;400;500&family=Noto+Nastaliq+Urdu:wght@400;600&display=swap" rel="stylesheet">
-<!-- META PIXEL (optional): YOUR_PIXEL_ID badal kar comment hata dein
+<link rel="icon" id="fav" href="data:,">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;800&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
+<!-- META PIXEL (optional): replace YOUR_PIXEL_ID and remove this comment
 <script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','YOUR_PIXEL_ID');fbq('track','PageView');</script>
 -->
 <style>
-@font-face{font-family:'JNN';src:local('Jameel Noori Nastaleeq'),local('JameelNooriNastaleeq'),url('JameelNooriNastaleeq.ttf') format('truetype');unicode-range:U+0600-06FF,U+0750-077F,U+FB50-FDFF,U+FE70-FEFF;font-display:swap}
-:root{--f1:'JNN','Noto Nastaliq Urdu','Sora',system-ui,sans-serif;--f2:'JNN','Noto Nastaliq Urdu','Outfit',system-ui,sans-serif}
-/* ===== 4 THEMES ===== */
-:root,[data-theme=violet]{--bg1:#14102b;--bg2:#2a1245;--ink:#f4f1ff;--muted:#b9b2d6;--glass:rgba(255,255,255,.08);--edge:rgba(255,255,255,.18);--field:rgba(255,255,255,.1);--accent:#ff7a59;--accent2:#ff4f81;--focus:#7c5cff;--orb1:#7c5cff;--orb2:#ff7a59;--ok:#3ddc97;--btn:#fff;--shadow:rgba(10,5,40,.3)}
-[data-theme=ocean]{--bg1:#06182b;--bg2:#0b3a5b;--ink:#eef7ff;--muted:#9fbad0;--glass:rgba(255,255,255,.08);--edge:rgba(255,255,255,.2);--field:rgba(255,255,255,.1);--accent:#22d3c5;--accent2:#3b82f6;--focus:#3b82f6;--orb1:#3b82f6;--orb2:#22d3c5;--ok:#5eead4;--btn:#04222b;--shadow:rgba(0,10,30,.35)}
-[data-theme=emerald]{--bg1:#07130e;--bg2:#11291d;--ink:#f3f7f1;--muted:#a6bdb0;--glass:rgba(255,255,255,.07);--edge:rgba(255,255,255,.16);--field:rgba(255,255,255,.09);--accent:#d4a73a;--accent2:#f0cf6e;--focus:#d4a73a;--orb1:#1f9d6b;--orb2:#d4a73a;--ok:#4ade80;--btn:#1d1604;--shadow:rgba(0,0,0,.4)}
-[data-theme=ivory]{--bg1:#f7f2e8;--bg2:#e8dcc3;--ink:#231b10;--muted:#6a5d49;--glass:rgba(255,255,255,.6);--edge:rgba(255,255,255,.95);--field:rgba(255,255,255,.7);--accent:#b8801f;--accent2:#8a5a14;--focus:#8a5a14;--orb1:#e0b45a;--orb2:#c98b6b;--ok:#1f8f5f;--btn:#fff;--shadow:rgba(90,60,10,.18)}
+/* ===== 5 THEMES ===== */
+:root,[data-theme=violet]{--bg1:#14102b;--bg2:#2a1245;--ink:#f4f1ff;--muted:#b9b2d6;--glass:rgba(255,255,255,.08);--edge:rgba(255,255,255,.18);--field:rgba(255,255,255,.1);--accent:#ff7a59;--accent2:#ff4f81;--focus:#7c5cff;--orb1:#7c5cff;--orb2:#ff7a59;--orbop:.5;--ok:#3ddc97;--btn:#fff;--shadow:rgba(10,5,40,.3)}
+[data-theme=ocean]{--bg1:#06182b;--bg2:#0b3a5b;--ink:#eef7ff;--muted:#9fbad0;--glass:rgba(255,255,255,.08);--edge:rgba(255,255,255,.2);--field:rgba(255,255,255,.1);--accent:#22d3c5;--accent2:#3b82f6;--focus:#3b82f6;--orb1:#3b82f6;--orb2:#22d3c5;--orbop:.5;--ok:#5eead4;--btn:#04222b;--shadow:rgba(0,10,30,.35)}
+[data-theme=emerald]{--bg1:#07130e;--bg2:#11291d;--ink:#f3f7f1;--muted:#a6bdb0;--glass:rgba(255,255,255,.07);--edge:rgba(255,255,255,.16);--field:rgba(255,255,255,.09);--accent:#d4a73a;--accent2:#f0cf6e;--focus:#d4a73a;--orb1:#1f9d6b;--orb2:#d4a73a;--orbop:.5;--ok:#4ade80;--btn:#1d1604;--shadow:rgba(0,0,0,.4)}
+[data-theme=ivory]{--bg1:#f7f2e8;--bg2:#e8dcc3;--ink:#231b10;--muted:#6a5d49;--glass:rgba(255,255,255,.6);--edge:rgba(255,255,255,.95);--field:rgba(255,255,255,.7);--accent:#b8801f;--accent2:#8a5a14;--focus:#8a5a14;--orb1:#e0b45a;--orb2:#c98b6b;--orbop:.5;--ok:#1f8f5f;--btn:#fff;--shadow:rgba(90,60,10,.18)}
+[data-theme=white]{--bg1:#ffffff;--bg2:#f3f5fa;--ink:#111827;--muted:#5b6475;--glass:rgba(255,255,255,.9);--edge:rgba(17,24,39,.09);--field:rgba(17,24,39,.04);--accent:#2563eb;--accent2:#4f46e5;--focus:#2563eb;--orb1:#c7d2fe;--orb2:#bae6fd;--orbop:.55;--ok:#059669;--btn:#fff;--shadow:rgba(17,24,39,.1)}
+:root{--logo:44px}
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:var(--f2);color:var(--ink);background:linear-gradient(135deg,var(--bg1),var(--bg2));background-attachment:fixed;min-height:100vh;overflow-x:hidden;line-height:1.6;transition:background .5s,color .4s}
-h1,h2,h3{font-family:var(--f1);line-height:1.15}
-.orb{position:fixed;border-radius:50%;filter:blur(80px);opacity:.5;z-index:-1;animation:drift 18s ease-in-out infinite alternate;transition:background .5s}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:'Outfit',system-ui,sans-serif;color:var(--ink);background:linear-gradient(135deg,var(--bg1),var(--bg2));background-attachment:fixed;min-height:100vh;overflow-x:hidden;line-height:1.6;transition:background .5s,color .4s}
+h1,h2,h3{font-family:'Sora',system-ui,sans-serif;line-height:1.2}
+img{max-width:100%}
+.orb{position:fixed;border-radius:50%;filter:blur(80px);opacity:var(--orbop);z-index:-1;animation:drift 18s ease-in-out infinite alternate;transition:background .5s;pointer-events:none}
 .o1{width:420px;height:420px;background:var(--orb1);top:-100px;left:-120px}
 .o2{width:380px;height:380px;background:var(--orb2);bottom:-120px;right:-100px;animation-delay:-6s}
 @keyframes drift{to{transform:translate(60px,80px) scale(1.15)}}
 .glass{background:var(--glass);border:1px solid var(--edge);backdrop-filter:blur(18px) saturate(160%);-webkit-backdrop-filter:blur(18px) saturate(160%);border-radius:24px;box-shadow:0 20px 50px var(--shadow)}
 .wrap{max-width:1100px;margin:0 auto;padding:0 20px}
-nav{position:sticky;top:12px;z-index:10;margin:12px auto;max-width:1100px;display:flex;justify-content:space-between;align-items:center;padding:12px 22px;border-radius:999px}
-nav b{font-family:var(--f1);font-size:1.1rem}
-.btn{display:inline-block;border:0;cursor:pointer;font:600 1rem var(--f1);color:var(--btn);background:linear-gradient(120deg,var(--accent),var(--accent2));padding:14px 30px;border-radius:999px;text-decoration:none;box-shadow:0 10px 30px var(--shadow);transition:transform .25s,filter .25s}
-.btn:hover{transform:translateY(-3px);filter:brightness(1.1)}
+.brandrow{display:flex;align-items:center;justify-content:flex-start;gap:12px;padding:22px 0 0}
+.brandrow img{height:var(--logo);width:auto;max-width:60vw;object-fit:contain}
+.brandrow b{font:800 var(--bsize,22px) 'Sora',system-ui,sans-serif;line-height:1.2}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;border:0;cursor:pointer;font:600 1rem 'Sora',system-ui,sans-serif;color:var(--btn);background:linear-gradient(120deg,var(--accent),var(--accent2));padding:12px 30px;border-radius:999px;text-decoration:none;box-shadow:0 10px 30px var(--shadow);transition:transform .25s,filter .25s;-webkit-tap-highlight-color:transparent}
+.btn:hover{transform:translateY(-3px);filter:brightness(1.08)}
 .btn:disabled{opacity:.6;cursor:wait}
-.btn.sm{padding:9px 20px;font-size:.9rem}
-.hero{display:grid;grid-template-columns:1.05fr 1fr;gap:40px;align-items:center;padding:50px 0 70px}
+.btn.sm{min-height:40px;padding:8px 20px;font-size:.9rem}
+.hero{display:grid;grid-template-columns:1.05fr 1fr;gap:40px;align-items:center;padding:36px 0 70px}
 .badge{display:inline-block;padding:6px 16px;border-radius:999px;background:var(--glass);border:1px solid var(--ok);color:var(--ok);font-weight:500;margin-bottom:18px}
-.hero h1{font-size:clamp(2.2rem,5vw,3.6rem);font-weight:800;margin-bottom:16px}
+.hero h1{font-size:clamp(2rem,6vw,3.6rem);font-weight:800;margin-bottom:16px}
 .hero p{color:var(--muted);font-size:1.1rem;max-width:480px;margin-bottom:24px}
-.price{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:22px}
-.price .now{font:800 2.4rem Sora}
+.price{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:22px}
+.price .now{font:800 2.4rem 'Sora',sans-serif}
 .price s{color:var(--muted);font-size:1.2rem}
 .price .off{background:var(--accent);color:var(--btn);padding:3px 12px;border-radius:999px;font-weight:600;font-size:.9rem}
 .timer{display:flex;gap:10px;margin-bottom:26px}
 .timer div{padding:10px 14px;text-align:center;min-width:64px;border-radius:16px}
-.timer b{display:block;font:800 1.4rem Sora}
+.timer b{display:block;font:800 1.4rem 'Sora',sans-serif}
 .timer small{color:var(--muted)}
 .shot{padding:22px;animation:float 6s ease-in-out infinite;position:relative}
 .shot img{width:100%;display:block;border-radius:18px;aspect-ratio:1/1;object-fit:cover}
 @keyframes float{50%{transform:translateY(-14px)}}
-.shot .tag{position:absolute;top:34px;right:34px;padding:8px 16px;border-radius:999px;font-weight:600}
+.shot .tag{position:absolute;z-index:3;top:34px;right:34px;padding:8px 16px;border-radius:999px;font-weight:600}
+.stage{position:relative}
+.stage .arr{position:absolute;top:50%;transform:translateY(-50%);width:42px;height:42px;min-height:0;padding:0;border-radius:50%;border:1px solid var(--edge);background:var(--glass);color:var(--ink);cursor:pointer;font-size:1.5rem;line-height:1;display:grid;place-items:center;-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);z-index:2;box-shadow:0 6px 16px var(--shadow)}
+.arr.prev{left:10px}.arr.next{right:10px}
+.thumbs{display:flex;gap:10px;margin-top:14px;justify-content:center}
+.thumbs button{flex:0 1 74px;aspect-ratio:1/1;padding:0;border-radius:12px;border:2px solid transparent;overflow:hidden;cursor:pointer;background:var(--field);opacity:.65;transition:opacity .2s,border-color .2s}
+.thumbs button.on{border-color:var(--accent);opacity:1}
+.thumbs img{width:100%;height:100%;aspect-ratio:auto;border-radius:0;object-fit:cover;display:block}
 section{padding:50px 0}
-h2{font-size:clamp(1.7rem,3.5vw,2.4rem);margin-bottom:26px;text-align:center}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px}
+h2{font-size:clamp(1.6rem,4.5vw,2.4rem);margin-bottom:26px;text-align:center}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(230px,100%),1fr));gap:20px}
 .card{padding:26px;transition:transform .3s}
 .card:hover{transform:translateY(-6px)}
 .card h3{margin-bottom:8px;font-size:1.1rem}
 .card p{color:var(--muted)}
 .ico{font-size:1.8rem;margin-bottom:10px}
-.stars{color:#ffc857;letter-spacing:2px;margin-bottom:8px}
+.stars{color:#f5b301;letter-spacing:2px;margin-bottom:8px}
 .who{margin-top:12px;font-weight:500}
 .order{display:grid;grid-template-columns:1.2fr .8fr;gap:24px}
 .order form,.summary{padding:30px}
 label{display:block;font-weight:500;margin:14px 0 6px}
-input,select,textarea{width:100%;padding:13px 16px;border-radius:14px;border:1px solid var(--edge);background:var(--field);color:var(--ink);font:inherit;outline:none;transition:border .2s,box-shadow .2s}
+input,select,textarea{width:100%;padding:13px 16px;border-radius:14px;border:1px solid var(--edge);background:var(--field);color:var(--ink);font:inherit;font-size:16px;outline:none;transition:border .2s,box-shadow .2s}
 select option{color:#222}
 input:focus,select:focus,textarea:focus{border-color:var(--focus);box-shadow:0 0 0 4px color-mix(in srgb,var(--focus) 35%,transparent)}
 .row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-.summary li{list-style:none;display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px dashed var(--edge)}
-.summary .total{font:800 1.3rem var(--f1);border:0;padding-top:16px}
+.summary li{list-style:none;display:flex;justify-content:space-between;gap:10px;padding:10px 0;border-bottom:1px dashed var(--edge)}
+.summary .total{font:800 1.3rem 'Sora',sans-serif;border:0;padding-top:16px}
 .note{color:var(--muted);font-size:.9rem;margin-top:14px}
 #msg{margin-top:14px;font-weight:500}
 .done{text-align:center;padding:40px 20px;display:none}
 .done .tick{width:80px;height:80px;border-radius:50%;background:var(--ok);color:#fff;font-size:2.6rem;display:grid;place-items:center;margin:0 auto 18px;animation:pop .6s cubic-bezier(.2,1.6,.4,1)}
 @keyframes pop{from{transform:scale(0)}}
-footer{text-align:center;color:var(--muted);padding:30px 0 50px}
+footer{text-align:center;color:var(--muted);padding:30px 20px 50px}
 .reveal{opacity:0;transform:translateY(30px);transition:opacity .8s,transform .8s}
 .reveal.in{opacity:1;transform:none}
-.ur{unicode-bidi:plaintext;line-height:2.1}
-#waPrev{white-space:pre-wrap;background:var(--field);border:1px solid var(--edge);border-radius:12px;padding:10px;font-size:.82rem;max-height:240px;overflow:auto;margin-top:6px}
+.bar{display:none;position:fixed;left:0;right:0;bottom:0;z-index:40;padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));align-items:center;justify-content:space-between;gap:12px;border-radius:20px 20px 0 0;transition:transform .3s}
+.bar.off{transform:translateY(110%)}
+.bar small{color:var(--muted);display:block;line-height:1.2}
+.bar b{font:800 1.2rem 'Sora',sans-serif}
 .hide{display:none!important}
 :focus-visible{outline:3px solid var(--focus);outline-offset:3px}
-/* ===== ADMIN PANEL (sirf ?admin par nazar aata hai) ===== */
+/* ===== ADMIN PANEL (visible only with ?admin) ===== */
 #fab{position:fixed;right:18px;bottom:18px;z-index:50;display:none}
-#panel{position:fixed;top:0;right:0;height:100%;width:min(380px,100%);z-index:60;background:var(--bg1);border-left:1px solid var(--edge);box-shadow:-20px 0 50px var(--shadow);overflow-y:auto;padding:18px 18px 40px;transform:translateX(105%);transition:transform .35s;font-size:.92rem}
+#panel{position:fixed;top:0;right:0;height:100%;width:min(400px,100%);z-index:60;background:var(--bg1);border-left:1px solid var(--edge);box-shadow:-20px 0 50px var(--shadow);overflow-y:auto;padding:18px 18px 60px;transform:translateX(105%);transition:transform .35s;font-size:.92rem}
 #panel.open{transform:none}
-#panel h4{font:700 1rem var(--f1);margin:22px 0 6px;padding-top:14px;border-top:1px solid var(--edge)}
+#panel h4{font:700 1rem 'Sora',sans-serif;margin:22px 0 6px;padding-top:14px;border-top:1px solid var(--edge)}
 #panel label{margin:10px 0 4px;font-size:.85rem;color:var(--muted)}
 #panel input,#panel textarea,#panel select{padding:9px 12px;border-radius:10px}
 #panel input[type=checkbox]{width:auto;margin-right:8px}
-#panel input[type=color]{padding:2px;height:38px}
-.sw{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
-.sw button{height:54px;border-radius:12px;border:2px solid transparent;cursor:pointer;color:#fff;font:600 .72rem Sora;text-shadow:0 1px 3px #000}
-.sw button.on{border-color:var(--ink)}
+#panel input[type=color]{padding:2px;height:40px}
+#panel input[type=range]{padding:0}
+.sw{display:grid;grid-template-columns:repeat(auto-fit,minmax(78px,1fr));gap:8px}
+.sw button{height:54px;border-radius:12px;border:2px solid transparent;cursor:pointer;color:#fff;font:600 .72rem 'Sora',sans-serif;text-shadow:0 1px 3px #000}
+.sw button.light{color:#222;text-shadow:none;border-color:rgba(0,0,0,.12)}
+.sw button.on{border-color:var(--ink);box-shadow:0 0 0 2px var(--accent)}
 .item{border:1px solid var(--edge);border-radius:14px;padding:10px;margin-top:10px}
-.mini{border:1px solid var(--edge);background:var(--field);color:var(--ink);border-radius:10px;padding:7px 12px;cursor:pointer;font:inherit;margin-top:8px}
+.mini{border:1px solid var(--edge);background:var(--field);color:var(--ink);border-radius:10px;padding:9px 14px;cursor:pointer;font:inherit;margin-top:8px;min-height:40px}
 .two{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-@media(max-width:820px){.hero,.order{grid-template-columns:1fr}.hero{padding-top:20px}}
+pre{white-space:pre-wrap;word-break:break-word;background:var(--field);border:1px solid var(--edge);border-radius:12px;padding:10px;font-size:.78rem;max-height:240px;overflow:auto;margin-top:6px}
+details{margin-top:10px}
+summary{cursor:pointer;font-weight:500}
+/* ===== MOBILE ===== */
+@media(max-width:820px){
+  .hero,.order{grid-template-columns:1fr}
+  .hero{padding:16px 0 36px;gap:24px}
+  .shot{order:-1;animation:none;padding:14px}
+  .shot .tag{top:24px;right:24px}
+  section{padding:32px 0}
+  .summary{order:-1}
+  .bar{display:flex}
+  body{padding-bottom:84px}
+  .orb{width:260px;height:260px;filter:blur(60px)}
+  #fab{bottom:96px}
+}
+@media(max-width:520px){
+  .wrap{padding:0 16px}
+  .row,.two{grid-template-columns:1fr}
+  .row{gap:0}
+  .two{gap:0}
+  .hero .btn{width:100%}
+  .timer{gap:8px}.timer div{flex:1;min-width:0;padding:8px}
+  .price .now{font-size:2rem}
+  .order form,.summary{padding:20px}
+  .card{padding:20px}
+  .glass{border-radius:20px}
+}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
 </style>
 </head>
 <body>
 <div class="orb o1"></div><div class="orb o2"></div>
 
-<nav class="glass"><b id="brand"></b><a href="#order" class="btn sm" id="navCta"></a></nav>
-
 <main class="wrap">
+  <div class="brandrow" id="brandRow"><img id="logo" alt="Logo"><b id="brand"></b></div>
+
   <div class="hero">
     <div>
       <span class="badge" id="stock"></span>
@@ -117,7 +158,10 @@ footer{text-align:center;color:var(--muted);padding:30px 0 50px}
       </div>
       <a href="#order" class="btn" id="cta"></a>
     </div>
-    <div class="glass shot"><span class="tag glass" id="tag"></span><img id="img" alt="Product image"></div>
+    <div class="glass shot"><span class="tag glass" id="tag"></span>
+      <div class="stage" id="stage"><img id="img" alt="Product image"><button class="arr prev" id="prev" type="button" aria-label="Previous image">‹</button><button class="arr next" id="next" type="button" aria-label="Next image">›</button></div>
+      <div class="thumbs" id="thumbs"></div>
+    </div>
   </div>
 
   <section class="reveal" id="secF"><h2 id="h2F"></h2><div class="grid" id="features"></div></section>
@@ -129,14 +173,14 @@ footer{text-align:center;color:var(--muted);padding:30px 0 50px}
       <form id="form" class="glass" novalidate>
         <label for="name" id="lName"></label><input id="name" name="name" autocomplete="name" required>
         <div class="row">
-          <div><label for="phone" id="lPhone"></label><input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="03xx xxxxxxx" required></div>
+          <div><label for="phone" id="lPhone"></label><input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="03xx xxxxxxx" required></div>
           <div><label for="qty" id="lQty"></label><select id="qty" name="qty"></select></div>
         </div>
         <label for="city" id="lCity"></label><input id="city" name="city" autocomplete="address-level2" required>
         <label for="address" id="lAddr"></label><textarea id="address" name="address" rows="3" autocomplete="street-address" required></textarea>
         <label for="pay" id="lPay"></label><select id="pay" name="pay"></select>
         <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
-        <p style="margin-top:20px"><button class="btn" id="submit" type="submit"></button></p>
+        <p style="margin-top:20px"><button class="btn" id="submit" type="submit" style="width:100%"></button></p>
         <p id="msg" role="status"></p>
       </form>
       <aside class="glass summary">
@@ -155,57 +199,89 @@ footer{text-align:center;color:var(--muted);padding:30px 0 50px}
 </main>
 <footer>© <span id="yr"></span> <span id="brand2"></span>. All rights reserved.</footer>
 
+<div class="bar glass" id="bar"><div><small id="barLbl">Total</small><b id="barPrice"></b></div><a href="#order" class="btn sm" id="barCta"></a></div>
 <button class="btn sm" id="fab">⚙ Edit page</button>
 <aside id="panel" aria-label="Control panel"></aside>
 
 <script>
-/* ===== DEFAULT SETTINGS (admin panel se sab badal sakte hain) ===== */
+/* ===== DEFAULT SETTINGS (everything can be changed from the admin panel) ===== */
 const DEFAULTS = {
   theme:"violet", accent:"", accent2:"",
-  brand:"Your Brand", title:"Smart Watch Pro",
-  tagline:"AMOLED display, 7 din ki battery, heart-rate tracking aur calls — sab kuch ek khoobsurat watch mein.",
-  stock:"Sirf 17 pieces baaki", tag:"Free Delivery", cta:"Order Now – Cash on Delivery", submitText:"Order confirm karein",
-  image:"", currency:"Rs", price:4999, oldPrice:8999, shipping:0, offerHours:6, maxQty:5,
+  brand:"Your Brand", showBrand:true, logo:"", logoSize:44, brandSize:22,
+  title:"Smart Watch Pro",
+  tagline:"AMOLED display, 7-day battery, heart-rate tracking and calls — everything in one stylish watch.",
+  stock:"Only 17 left in stock", tag:"Free Delivery", cta:"Order Now – Cash on Delivery", barCta:"Order Now", submitText:"Confirm Order",
+  images:["","","",""], currency:"Rs", price:4999, oldPrice:8999, shipping:0, offerHours:6, maxQty:5,
   payments:"Cash on Delivery, Easypaisa / JazzCash, Bank Transfer",
-  whatsapp:"923001234567", email:"you@example.com",
-  h2F:"Is product mein kya khaas hai", h2R:"Customers ka kehna hai", h2O:"Order confirm karein",
+  whatsapp:"923001234567", email:"you@example.com", sheetUrl:"",
+  h2F:"Why you'll love it", h2R:"What customers say", h2O:"Confirm your order",
   showTimer:true, showFeatures:true, showReviews:true,
-  lName:"Poora naam",lPhone:"Phone / WhatsApp",lQty:"Quantity",lCity:"Shehr",lAddr:"Mukammal address",lPay:"Payment",lSum:"Order summary",lPrice:"Price",lQtyS:"Quantity",lShip:"Delivery",lTot:"Total",lFree:"Free",tH:"Hours",tM:"Min",tS:"Sec",
-  sNote:"Order ki tafseelat seller ko foran email aur WhatsApp par mil jayengi. Hum aap se confirm karne ke liye rabta karenge.",
-  doneTitle:"Shukriya! Aapka order mil gaya",doneMsg:"{name}, hum jald hi {phone} par rabta karenge. Order ID: {orderId} | Total: {total}",
-  msgFill:"Barae meharbani naam, sahi phone number, shehr aur address bharein.",msgSending:"Order bheja ja raha hai…",msgMailFail:"Email nahi gayi, lekin WhatsApp par order bhej diya gaya hai. Agar WhatsApp nahi khula to dobara try karein.",
-  waTemplate:"🛍️ *NAYA ORDER* | {orderId}\n━━━━━━━━━━━━━━━\n📦 *Product:* {product}\n🔢 *Quantity:* {qty}\n💵 *Qeemat (1 piece):* {price}\n🚚 *Delivery:* {shipping}\n💰 *Total Raqam:* {total}\n💳 *Payment:* {payment}\n━━━━━━━━━━━━━━━\n👤 *Naam:* {name}\n📞 *Phone:* {phone}\n🏙️ *Shehr:* {city}\n📍 *Address:* {address}\n━━━━━━━━━━━━━━━\n🕒 {date}\n\nBarae meharbani mera order confirm kar dein. Shukriya! 🙏",
-  features:[["⌚","AMOLED Display","1.4 inch bright screen, dhoop mein bhi saaf."],["🔋","7 Din Battery","Ek charge, poora hafta."],["❤️","Health Tracking","Heart rate, sleep aur steps ki monitoring."],["💧","Water Resistant","Baarish aur paseena, koi masla nahi."]],
-  reviews:[["Ali Raza, Lahore","Quality umeed se behtar hai. Delivery 2 din mein aa gayi.",5],["Sana Khan, Karachi","Battery kamal ki hai aur display bohat sharp hai.",5],["Usman Tariq, Islamabad","Paisa wasool. Dost ke liye bhi order kiya.",4]]
+  lName:"Full name", lPhone:"Phone / WhatsApp", lQty:"Quantity", lCity:"City", lAddr:"Complete address", lPay:"Payment method",
+  lSum:"Order summary", lPrice:"Price", lQtyS:"Quantity", lShip:"Delivery", lTot:"Total", lFree:"Free", tH:"Hours", tM:"Min", tS:"Sec",
+  sNote:"Your order details go straight to the seller by email and WhatsApp. We'll contact you to confirm.",
+  doneTitle:"Thank you! Your order is received",
+  doneMsg:"{name}, we'll contact you shortly on {phone}. Order ID: {orderId} | Total: {total}",
+  msgFill:"Please enter your name, a valid phone number, city and address.",
+  msgSending:"Sending your order…",
+  msgFail:"We couldn't save your order online, but it was sent to WhatsApp. If WhatsApp didn't open, please try again.",
+  waTemplate:"🛍️ *NEW ORDER* | {orderId}\n━━━━━━━━━━━━━━━\n📦 *Product:* {product}\n🔢 *Quantity:* {qty}\n💵 *Unit price:* {price}\n🚚 *Delivery:* {shipping}\n💰 *Total:* {total}\n💳 *Payment:* {payment}\n━━━━━━━━━━━━━━━\n👤 *Name:* {name}\n📞 *Phone:* {phone}\n🏙️ *City:* {city}\n📍 *Address:* {address}\n━━━━━━━━━━━━━━━\n🕒 {date}\n\nPlease confirm my order. Thank you! 🙏",
+  features:[["⌚","AMOLED Display","1.4-inch bright screen, clear even in sunlight."],["🔋","7-Day Battery","One charge lasts a full week."],["❤️","Health Tracking","Heart rate, sleep and step monitoring."],["💧","Water Resistant","Rain and sweat are no problem."]],
+  reviews:[["Ali Raza, Lahore","Better quality than I expected. It arrived in 2 days.",5],["Sana Khan, Karachi","The battery is amazing and the display is very sharp.",5],["Usman Tariq, Islamabad","Great value for money. I ordered another one for a friend.",4]]
 };
-const THEMES={violet:["Midnight Violet","#14102b,#ff4f81"],ocean:["Ocean Blue","#06182b,#22d3c5"],emerald:["Emerald Gold","#07130e,#d4a73a"],ivory:["Ivory Gold","#e8dcc3,#b8801f"]};
+const THEMES={violet:["Midnight Violet","#14102b,#ff4f81"],ocean:["Ocean Blue","#06182b,#22d3c5"],emerald:["Emerald Gold","#07130e,#d4a73a"],ivory:["Ivory Gold","#e8dcc3,#b8801f"],white:["Pure White","#ffffff,#2563eb"]};
+const LIGHT=["ivory","white"];
+const LBL=["lName","lPhone","lQty","lCity","lAddr","lPay","lSum","lPrice","lQtyS","lShip","lTot","sNote","tH","tM","tS","doneTitle"];
+const SHEET_SCRIPT=`function doPost(e) {
+  var lock = LockService.getScriptLock();
+  lock.waitLock(10000);
+  try {
+    var ss = SpreadsheetApp.getActiveSpreadsheet();
+    var sh = ss.getSheetByName("Orders") || ss.insertSheet("Orders");
+    if (sh.getLastRow() === 0) {
+      sh.appendRow(["Order ID","Date","Product","Quantity","Unit price","Delivery","Total","Payment","Name","Phone","City","Address","Status"]);
+    }
+    var p = e.parameter, row = sh.getLastRow() + 1;
+    sh.getRange(row, 1, 1, 13).setNumberFormat("@");
+    sh.getRange(row, 1, 1, 13).setValues([[p.orderId, p.date, p.product, p.qty, p.price, p.shipping, p.total, p.payment, p.name, p.phone, p.city, p.address, "New"]]);
+  } finally {
+    lock.releaseLock();
+  }
+  return ContentService.createTextOutput("ok");
+}`;
 
-const URDU={lName:"پورا نام",lPhone:"فون / واٹس ایپ",lQty:"تعداد",lCity:"شہر",lAddr:"مکمل پتہ",lPay:"ادائیگی کا طریقہ",lSum:"آرڈر کا خلاصہ",lPrice:"قیمت",lQtyS:"تعداد",lShip:"ڈیلیوری",lTot:"کل رقم",lFree:"مفت",tH:"گھنٹے",tM:"منٹ",tS:"سیکنڈ",sNote:"آرڈر کی تفصیل فوراً بیچنے والے کو ای میل اور واٹس ایپ پر مل جائے گی۔ ہم تصدیق کے لیے آپ سے رابطہ کریں گے۔",doneTitle:"شکریہ! آپ کا آرڈر موصول ہو گیا",doneMsg:"{name}، ہم جلد ہی {phone} پر رابطہ کریں گے۔ آرڈر نمبر: {orderId} | کل رقم: {total}",msgFill:"براہ کرم نام، درست فون نمبر، شہر اور پتہ درج کریں۔",msgSending:"آرڈر بھیجا جا رہا ہے…",msgMailFail:"ای میل نہیں جا سکی، لیکن واٹس ایپ پر آرڈر بھیج دیا گیا ہے۔ اگر واٹس ایپ نہ کھلا ہو تو دوبارہ کوشش کریں۔",h2F:"اس پروڈکٹ میں کیا خاص ہے",h2R:"ہمارے صارفین کیا کہتے ہیں",h2O:"اپنا آرڈر کنفرم کریں",cta:"ابھی آرڈر کریں – کیش آن ڈیلیوری",submitText:"آرڈر کنفرم کریں",payments:"کیش آن ڈیلیوری, ایزی پیسہ / جاز کیش, بینک ٹرانسفر"};
+const norm=raw=>{const c={...DEFAULTS,...raw};let im=Array.isArray(raw.images)?raw.images.slice(0,4):(raw.image?[raw.image]:[]);while(im.length<4)im.push("");c.images=im;delete c.image;return c};
 const $=id=>document.getElementById(id);
 const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const fill=(t,o)=>String(t).replace(/\{(\w+)\}/g,(m,k)=>o[k]??m);
 const ADMIN=new URLSearchParams(location.search).has("admin");
 let C=JSON.parse(JSON.stringify(DEFAULTS));
 const rs=n=>C.currency+" "+Number(n).toLocaleString("en-PK");
-const ph="data:image/svg+xml,"+encodeURIComponent(`<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 400'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='#7c5cff'/><stop offset='1' stop-color='#ff7a59'/></linearGradient></defs><rect width='400' height='400' fill='url(#g)'/><text x='200' y='215' font-size='26' text-anchor='middle' fill='white' font-family='sans-serif'>Apni product image yahan</text></svg>`);
+const ph="data:image/svg+xml,"+encodeURIComponent(`<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 400'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='#7c5cff'/><stop offset='1' stop-color='#ff7a59'/></linearGradient></defs><rect width='400' height='400' fill='url(#g)'/><text x='200' y='215' font-size='26' text-anchor='middle' fill='white' font-family='sans-serif'>Your product image here</text></svg>`);
 
 /* ===== RENDER ===== */
 let end,endHrs;
+function setSrc(el,v){if(el.getAttribute("src")!==v)el.src=v}
 function render(){
   const r=document.documentElement;
   r.dataset.theme=C.theme;
   ["accent","accent2"].forEach(k=>C[k]?r.style.setProperty("--"+k,C[k]):r.style.removeProperty("--"+k));
-  if(C.accent)r.style.setProperty("--focus",C.accent2||C.accent);else r.style.removeProperty("--focus");
-  document.title=C.title+" – Special Offer";
-  $("brand").textContent=$("brand2").textContent=C.brand;
+  C.accent?r.style.setProperty("--focus",C.accent2||C.accent):r.style.removeProperty("--focus");
+  r.style.setProperty("--logo",(C.logoSize||44)+"px");r.style.setProperty("--bsize",(C.brandSize||22)+"px");
+  const name=(C.brand||"").trim();
+  document.title=(name?name+" – ":"")+C.title;
+  $("fav").href=C.logo||"data:,";
+  $("logo").classList.toggle("hide",!C.logo); if(C.logo)setSrc($("logo"),C.logo);
+  $("brand").textContent=name; $("brand").classList.toggle("hide",!name||(!!C.logo&&!C.showBrand));
+  $("brandRow").classList.toggle("hide",!C.logo&&!name);
+  $("brand2").textContent=name||C.title;
   $("title").textContent=C.title; $("tagline").textContent=C.tagline;
   $("stock").textContent=C.stock; $("tag").textContent=C.tag;
-  $("cta").textContent=$("navCta").textContent=C.cta; $("submit").textContent=C.submitText;
+  $("cta").textContent=C.cta; $("barCta").textContent=C.barCta; $("submit").textContent=C.submitText;
   $("h2F").textContent=C.h2F; $("h2R").textContent=C.h2R; $("h2O").textContent=C.h2O;
-  $("img").src=C.image||ph; $("img").onerror=()=>{$("img").onerror=null;$("img").src=ph};
-  $("now").textContent=rs(C.price); $("old").textContent=rs(C.oldPrice);
+  gallery();
+  $("now").textContent=$("barPrice").textContent=rs(C.price); $("old").textContent=rs(C.oldPrice);
   const pct=C.oldPrice>C.price?Math.round((1-C.price/C.oldPrice)*100):0;
-  $("off").textContent=pct+"% OFF"; $("off").classList.toggle("hide",!pct);
-  $("old").classList.toggle("hide",!pct);
+  $("off").textContent=pct+"% OFF"; $("off").classList.toggle("hide",!pct); $("old").classList.toggle("hide",!pct);
   $("tag").classList.toggle("hide",!C.tag); $("stock").classList.toggle("hide",!C.stock);
   $("timer").classList.toggle("hide",!C.showTimer);
   $("secF").classList.toggle("hide",!C.showFeatures); $("secR").classList.toggle("hide",!C.showReviews);
@@ -215,39 +291,54 @@ function render(){
   const p=$("pay"),pv=p.value; p.innerHTML=C.payments.split(",").map(s=>s.trim()).filter(Boolean).map(s=>`<option>${esc(s)}</option>`).join(""); if(pv)p.value=pv;
   if(endHrs!==C.offerHours){endHrs=C.offerHours;const k="offerEnd"+endHrs;try{end=+localStorage.getItem(k)}catch(e){}if(!end||end<Date.now()){end=Date.now()+endHrs*3600e3;try{localStorage.setItem(k,end)}catch(e){}}}
   LBL.forEach(k=>$(k).textContent=C[k]);
-  summary();mark();
+  summary();
 }
-const LBL=["lName","lPhone","lQty","lCity","lAddr","lPay","lSum","lPrice","lQtyS","lShip","lTot","sNote","tH","tM","tS","doneTitle"];
-function mark(){document.querySelectorAll("nav *,main *,footer *").forEach(el=>el.classList.toggle("ur",[...el.childNodes].some(n=>n.nodeType===3&&/[\u0600-\u06FF]/.test(n.textContent))))}
+let gi=0;
+function pics(){const a=C.images.filter(Boolean);return a.length?a:[ph]}
+function gallery(){
+  const a=pics();if(gi>=a.length)gi=0;
+  const im=$("img");setSrc(im,a[gi]);im.onerror=()=>{im.onerror=null;im.src=ph};
+  const multi=a.length>1;
+  $("prev").classList.toggle("hide",!multi);$("next").classList.toggle("hide",!multi);$("thumbs").classList.toggle("hide",!multi);
+  $("thumbs").innerHTML=multi?a.map((x,i)=>`<button type="button" data-i="${i}" class="${i===gi?"on":""}" aria-label="Show image ${i+1}"><img src="${esc(x)}" alt=""></button>`).join(""):"";
+}
+function go(d){const n=pics().length;gi=(gi+d+n)%n;gallery()}
+$("prev").onclick=()=>go(-1);$("next").onclick=()=>go(1);
+$("thumbs").onclick=e=>{const b=e.target.closest("button");if(b){gi=+b.dataset.i;gallery()}};
+let tx=null;
+$("stage").addEventListener("touchstart",e=>{tx=e.touches[0].clientX},{passive:true});
+$("stage").addEventListener("touchend",e=>{if(tx===null)return;const dx=e.changedTouches[0].clientX-tx;tx=null;if(Math.abs(dx)>40)go(dx<0?1:-1)});
 function total(){return C.price*+$("qty").value+ +C.shipping}
 function summary(){$("sPrice").textContent=rs(C.price);$("sQty").textContent=$("qty").value;$("sShip").textContent=+C.shipping?rs(C.shipping):C.lFree;$("sTotal").textContent=rs(total())}
 $("qty").addEventListener("change",summary);
 setInterval(()=>{const t=Math.max(0,Math.floor((end-Date.now())/1000));$("h").textContent=String(Math.floor(t/3600)).padStart(2,"0");$("m").textContent=String(Math.floor(t%3600/60)).padStart(2,"0");$("s").textContent=String(t%60).padStart(2,"0")},1000);
 $("yr").textContent=new Date().getFullYear();
-const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}}),{threshold:.1});
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}}),{threshold:.08});
 document.querySelectorAll(".reveal").forEach(el=>io.observe(el));
+// hide the mobile bottom bar while the order form is on screen
+new IntersectionObserver(es=>es.forEach(e=>$("bar").classList.toggle("off",e.isIntersecting)),{threshold:.05}).observe($("order"));
 
 /* ===== ORDER SUBMIT ===== */
-const fill=(t,o)=>String(t).replace(/\{(\w+)\}/g,(m,k)=>o[k]??m);
 $("form").addEventListener("submit",async e=>{
-  e.preventDefault();const f=e.target,msg=$("msg");
-  if(!f.name.value.trim()||!/^[0-9+\s-]{10,15}$/.test(f.phone.value.trim())||!f.city.value.trim()||!f.address.value.trim()){msg.style.color="#ff6b6b";msg.textContent=C.msgFill;return}
+  e.preventDefault();const f=e.target,msg=$("msg"),v=n=>f.elements[n].value.trim();
+  if(!v("name")||!/^[0-9+\s-]{10,15}$/.test(v("phone"))||!v("city")||!v("address")){msg.style.color="#e5484d";msg.textContent=C.msgFill;return}
   const n=new Date(),z=x=>String(x).padStart(2,"0");
   const d={orderId:"ORD-"+String(n.getFullYear()).slice(2)+z(n.getMonth()+1)+z(n.getDate())+"-"+Math.floor(1000+Math.random()*9000),
     date:n.toLocaleString("en-PK",{dateStyle:"medium",timeStyle:"short"}),product:C.title,qty:f.qty.value,price:rs(C.price),
-    shipping:+C.shipping?rs(C.shipping):C.lFree,total:rs(total()),payment:f.pay.value,
-    name:f.name.value.trim(),phone:f.phone.value.trim(),city:f.city.value.trim(),address:f.address.value.trim()};
-  window.open(`https://wa.me/${C.whatsapp}?text=${encodeURIComponent(fill(C.waTemplate,d))}`,"_blank");
+    shipping:+C.shipping?rs(C.shipping):C.lFree,total:rs(total()),payment:f.pay.value,name:v("name"),phone:v("phone"),city:v("city"),address:v("address")};
+  if(C.whatsapp)window.open(`https://wa.me/${C.whatsapp}?text=${encodeURIComponent(fill(C.waTemplate,d))}`,"_blank");
   const btn=$("submit");btn.disabled=true;msg.style.color="";msg.textContent=C.msgSending;
-  try{
-    const r=await fetch("https://formsubmit.co/ajax/"+C.email,{method:"POST",headers:{"Content-Type":"application/json",Accept:"application/json"},
-      body:JSON.stringify({"Order ID":d.orderId,Date:d.date,Product:d.product,Quantity:d.qty,"Unit price":d.price,Delivery:d.shipping,Total:d.total,Payment:d.payment,Name:d.name,Phone:d.phone,City:d.city,Address:d.address,_subject:"New Order "+d.orderId+": "+C.title+" – "+d.name,_template:"table",_honey:f._honey.value})});
-    if(!r.ok)throw 0;
-    if(window.fbq)fbq("track","Purchase",{value:total(),currency:"PKR"});
-    f.style.display="none";document.querySelector(".summary").style.display="none";$("done").style.display="block";
-    $("doneTxt").textContent=fill(C.doneMsg,d);mark();
-    $("done").scrollIntoView({behavior:"smooth",block:"center"});
-  }catch(err){btn.disabled=false;msg.style.color="#ff6b6b";msg.textContent=C.msgMailFail;mark()}
+  const jobs=[];
+  if(C.sheetUrl)jobs.push(fetch(C.sheetUrl,{method:"POST",mode:"no-cors",body:new URLSearchParams(d)}));
+  if(C.email)jobs.push(fetch("https://formsubmit.co/ajax/"+C.email,{method:"POST",headers:{"Content-Type":"application/json",Accept:"application/json"},
+    body:JSON.stringify({"Order ID":d.orderId,Date:d.date,Product:d.product,Quantity:d.qty,"Unit price":d.price,Delivery:d.shipping,Total:d.total,Payment:d.payment,Name:d.name,Phone:d.phone,City:d.city,Address:d.address,_subject:"New Order "+d.orderId+": "+C.title+" – "+d.name,_template:"table",_honey:f._honey.value})
+  }).then(r=>{if(!r.ok)throw 0}));
+  const res=await Promise.allSettled(jobs);
+  if(jobs.length&&res.every(x=>x.status==="rejected")){btn.disabled=false;msg.style.color="#e5484d";msg.textContent=C.msgFail;return}
+  if(window.fbq)fbq("track","Purchase",{value:total(),currency:"PKR"});
+  f.style.display="none";document.querySelector(".summary").style.display="none";$("done").style.display="block";
+  $("doneTxt").textContent=fill(C.doneMsg,d);
+  $("done").scrollIntoView({behavior:"smooth",block:"center"});
 });
 
 /* ===== ADMIN PANEL ===== */
@@ -259,67 +350,77 @@ function setupAdmin(){
   const fld=(k,l,t="text")=>`<label>${l}<input data-k="${k}" type="${t}" value="${esc(C[k])}"></label>`;
   const ta=(k,l,r=3)=>`<label>${l}<textarea data-k="${k}" rows="${r}">${esc(C[k])}</textarea></label>`;
   const chk=(k,l)=>`<label><input type="checkbox" data-k="${k}" ${C[k]?"checked":""}>${l}</label>`;
+  const col=k=>C[k]||getComputedStyle(document.documentElement).getPropertyValue("--"+k).trim()||"#000000";
   function build(){
-    P.innerHTML=`<div style="display:flex;justify-content:space-between;align-items:center"><h3>Control Panel</h3><button class="mini" data-a="close">Band</button></div>
-    <p class="note">Changes live sirf aap ko nazar aate hain. Customers ko dikhane ke liye sab se neeche "GitHub par save karein" dabayein.</p>
+    P.innerHTML=`<div style="display:flex;justify-content:space-between;align-items:center"><h3>Control Panel</h3><button class="mini" data-a="close">Close</button></div>
+    <p class="note">Changes are visible only to you until you click "Save to GitHub" at the bottom.</p>
     <h4>Colour theme</h4>
-    <div class="sw">${Object.entries(THEMES).map(([k,[n,c]])=>{const[a,b]=c.split(",");return`<button data-a="theme" data-v="${k}" class="${C.theme===k?"on":""}" style="background:linear-gradient(135deg,${a},${b})">${n}</button>`}).join("")}</div>
-    <div class="two"><label>Accent 1<input type="color" data-k="accent" value="${C.accent||"#ff7a59"}"></label><label>Accent 2<input type="color" data-k="accent2" value="${C.accent2||"#ff4f81"}"></label></div>
-    <button class="mini" data-a="resetcolors">Theme ke asli colours</button>
-    <h4>Brand &amp; text</h4>
-    ${fld("brand","Brand naam")}${fld("title","Product ka naam")}
-    <label>Tagline<textarea data-k="tagline" rows="3">${esc(C.tagline)}</textarea></label>
-    ${fld("stock","Stock badge (khali = chhupa do)")}${fld("tag","Image par tag (khali = chhupa do)")}
-    ${fld("cta","Main button text")}${fld("submitText","Order button text")}
-    <h4>Product image</h4>
-    ${fld("image","Image link ya file ka naam (e.g. product.jpg)")}
-    <label>Ya device se image chunein<input type="file" accept="image/*" data-a="upload"></label>
+    <div class="sw">${Object.entries(THEMES).map(([k,[n,c]])=>{const[a,b]=c.split(",");return`<button data-a="theme" data-v="${k}" class="${LIGHT.includes(k)?"light ":""}${C.theme===k?"on":""}" style="background:linear-gradient(135deg,${a},${b})">${n}</button>`}).join("")}</div>
+    <div class="two"><label>Accent 1<input type="color" data-k="accent" value="${col("accent")}"></label><label>Accent 2<input type="color" data-k="accent2" value="${col("accent2")}"></label></div>
+    <button class="mini" data-a="resetcolors">Use theme colours</button>
+    <h4>Website name &amp; logo</h4>
+    ${fld("brand","Website name")}${chk("showBrand","Show the name next to the logo")}
+    <label>Name size: ${C.brandSize}px<input type="range" min="12" max="64" data-k="brandSize" value="${C.brandSize}"></label>
+    ${fld("logo","Logo link or file name (e.g. logo.png)")}
+    <label>Or upload a logo<input type="file" accept="image/*" data-a="logoup"></label>
+    <label>Logo height: ${C.logoSize}px<input type="range" min="24" max="140" data-k="logoSize" value="${C.logoSize}"></label>
+    <button class="mini" data-a="rmlogo">Remove logo</button>
+    <h4>Text</h4>
+    ${fld("title","Product name")}${ta("tagline","Tagline")}
+    ${fld("stock","Stock badge (empty = hidden)")}${fld("tag","Image tag (empty = hidden)")}
+    ${fld("cta","Main button text")}${fld("barCta","Mobile bottom bar button")}${fld("submitText","Order button text")}
+    <h4>Product images (up to 4)</h4>
+    <p class="note">Visitors switch images with the arrows, by swiping, or by tapping a thumbnail. Empty slots are skipped.</p>
+    ${C.images.map((x,i)=>`<div class="item"><b>Image ${i+1}</b>${x?`<div><img src="${esc(x)}" alt="" style="width:64px;height:64px;object-fit:cover;border-radius:8px;margin-top:6px"></div>`:""}${x&&x.startsWith("data:")?`<div class="note">Uploaded image</div>`:`<input data-im="${i}" value="${esc(x)}" placeholder="Link or file name, e.g. product-${i+1}.jpg" style="margin-top:6px">`}<label>Upload from device<input type="file" accept="image/*" data-a="upim" data-i="${i}"></label>${x?`<button class="mini" data-a="rmim" data-i="${i}">Remove</button>`:""}</div>`).join("")}
     <h4>Price &amp; offer</h4>
-    <div class="two">${fld("currency","Currency")}${fld("price","Sale price","number")}${fld("oldPrice","Purani price","number")}${fld("shipping","Delivery charges","number")}${fld("offerHours","Countdown (ghante)","number")}${fld("maxQty","Max quantity","number")}</div>
-    <label>Payment options (comma se alag)<textarea data-k="payments" rows="2">${esc(C.payments)}</textarea></label>
-    <h4>Order kahan aaye</h4>
-    ${fld("whatsapp","WhatsApp (923001234567)")}${fld("email","Email")}
+    <div class="two">${fld("currency","Currency")}${fld("price","Sale price","number")}${fld("oldPrice","Old price","number")}${fld("shipping","Delivery charges","number")}${fld("offerHours","Countdown (hours)","number")}${fld("maxQty","Max quantity","number")}</div>
+    <label>Payment options (comma separated)<textarea data-k="payments" rows="2">${esc(C.payments)}</textarea></label>
+    <h4>Where orders go</h4>
+    ${fld("whatsapp","WhatsApp number (e.g. 923001234567)")}${fld("email","Email (empty = off)")}${fld("sheetUrl","Google Sheet web app URL (empty = off)")}
+    <details><summary>Google Sheet setup code</summary>
+      <ol class="note" style="padding-left:18px"><li>Create a Google Sheet, then open Extensions → Apps Script.</li><li>Delete everything and paste the code below, then Save.</li><li>Deploy → New deployment → type "Web app". Execute as: Me. Who has access: Anyone.</li><li>Authorize, copy the Web app URL and paste it in the field above.</li></ol>
+      <button class="mini" data-a="copyjs">Copy code</button><pre>${esc(SHEET_SCRIPT)}</pre>
+    </details>
     <h4>Sections</h4>
-    ${chk("showTimer","Countdown timer dikhayen")}${chk("showFeatures","Features dikhayen")}${chk("showReviews","Reviews dikhayen")}
+    ${chk("showTimer","Show countdown timer")}${chk("showFeatures","Show features")}${chk("showReviews","Show reviews")}
     ${fld("h2F","Features heading")}${fld("h2R","Reviews heading")}${fld("h2O","Order heading")}
-    <h4>Features</h4>
-    ${C.features.map((f,i)=>`<div class="item"><div class="two"><input data-l="features" data-i="${i}" data-j="0" value="${esc(f[0])}" placeholder="Emoji"><input data-l="features" data-i="${i}" data-j="1" value="${esc(f[1])}" placeholder="Title"></div><input style="margin-top:8px" data-l="features" data-i="${i}" data-j="2" value="${esc(f[2])}" placeholder="Detail"><button class="mini" data-a="delf" data-i="${i}">Hatayen</button></div>`).join("")}
-    <button class="mini" data-a="addf">+ Feature</button>
-    <h4>Reviews</h4>
-    ${C.reviews.map((v,i)=>`<div class="item"><input data-l="reviews" data-i="${i}" data-j="0" value="${esc(v[0])}" placeholder="Naam, shehr"><textarea style="margin-top:8px" rows="2" data-l="reviews" data-i="${i}" data-j="1">${esc(v[1])}</textarea><select style="margin-top:8px" data-l="reviews" data-i="${i}" data-j="2">${[5,4,3,2,1].map(n=>`<option ${v[2]==n?"selected":""}>${n}</option>`).join("")}</select><button class="mini" data-a="delr" data-i="${i}">Hatayen</button></div>`).join("")}
-    <button class="mini" data-a="addr">+ Review</button>
-    <h4>Form aur Urdu text</h4>
-    <button class="mini" data-a="urdu">Urdu (نستعلیق) text load karein</button>
-    <div class="two">${fld("lName","Naam label")}${fld("lPhone","Phone label")}${fld("lQty","Quantity label")}${fld("lCity","Shehr label")}${fld("lAddr","Address label")}${fld("lPay","Payment label")}</div>
+    <h4>Form &amp; messages</h4>
+    <div class="two">${fld("lName","Name label")}${fld("lPhone","Phone label")}${fld("lQty","Quantity label")}${fld("lCity","City label")}${fld("lAddr","Address label")}${fld("lPay","Payment label")}</div>
     ${fld("lSum","Summary heading")}
-    <div class="two">${fld("lPrice","Price label")}${fld("lQtyS","Summary quantity")}${fld("lShip","Delivery label")}${fld("lTot","Total label")}${fld("lFree","Free ka lafz")}${fld("tH","Hours")}${fld("tM","Minutes")}${fld("tS","Seconds")}</div>
-    ${ta("sNote","Summary ke neeche note")}${fld("doneTitle","Order ke baad title")}${ta("doneMsg","Order ke baad message ({name} {phone} {orderId} {total})",2)}
-    ${fld("msgFill","Form khali hone ka error")}${fld("msgSending","Bhejte waqt message")}${ta("msgMailFail","Email fail hone ka message",2)}
+    <div class="two">${fld("lPrice","Price label")}${fld("lQtyS","Summary quantity")}${fld("lShip","Delivery label")}${fld("lTot","Total label")}${fld("lFree","Word for free")}${fld("tH","Hours")}${fld("tM","Minutes")}${fld("tS","Seconds")}</div>
+    ${ta("sNote","Note under summary")}${fld("doneTitle","Thank-you title")}${ta("doneMsg","Thank-you message ({name} {phone} {orderId} {total})",2)}
+    ${fld("msgFill","Empty form error")}${fld("msgSending","Sending message")}${ta("msgFail","Order not saved message",2)}
     <h4>WhatsApp message</h4>
     ${ta("waTemplate","Message template",12)}
-    <p class="note">Placeholders: {orderId} {date} {product} {qty} {price} {shipping} {total} {payment} {name} {phone} {city} {address}. *text* bold hota hai.</p>
+    <p class="note">Placeholders: {orderId} {date} {product} {qty} {price} {shipping} {total} {payment} {name} {phone} {city} {address}. Use *text* for bold.</p>
     <b>Preview:</b><pre id="waPrev">${esc(previewWA())}</pre>
+    <h4>Features</h4>
+    ${C.features.map((f,i)=>`<div class="item"><div class="two"><input data-l="features" data-i="${i}" data-j="0" value="${esc(f[0])}" placeholder="Emoji"><input data-l="features" data-i="${i}" data-j="1" value="${esc(f[1])}" placeholder="Title"></div><input style="margin-top:8px" data-l="features" data-i="${i}" data-j="2" value="${esc(f[2])}" placeholder="Detail"><button class="mini" data-a="delf" data-i="${i}">Remove</button></div>`).join("")}
+    <button class="mini" data-a="addf">+ Add feature</button>
+    <h4>Reviews</h4>
+    ${C.reviews.map((v,i)=>`<div class="item"><input data-l="reviews" data-i="${i}" data-j="0" value="${esc(v[0])}" placeholder="Name, city"><textarea style="margin-top:8px" rows="2" data-l="reviews" data-i="${i}" data-j="1">${esc(v[1])}</textarea><select style="margin-top:8px" data-l="reviews" data-i="${i}" data-j="2">${[5,4,3,2,1].map(n=>`<option ${v[2]==n?"selected":""}>${n}</option>`).join("")}</select><button class="mini" data-a="delr" data-i="${i}">Remove</button></div>`).join("")}
+    <button class="mini" data-a="addr">+ Add review</button>
     <h4>Save / Publish</h4>
-    <button class="btn sm" data-a="gh">GitHub par save karein</button>
+    <button class="btn sm" data-a="gh">Save to GitHub</button>
     <p class="note" id="ghmsg"></p>
-    <details><summary>GitHub connection (sirf ek baar)</summary>
+    <details><summary>GitHub connection (one time)</summary>
       <label>Username<input data-g="owner" value="${esc(GH.owner)}"></label>
-      <label>Repository ka naam<input data-g="repo" value="${esc(GH.repo)}"></label>
+      <label>Repository name<input data-g="repo" value="${esc(GH.repo)}"></label>
       <label>Branch<input data-g="branch" value="${esc(GH.branch)}"></label>
       <label>Access token<input data-g="token" type="password" value="${esc(GH.token)}"></label>
-      <p class="note">Token sirf aap ke is browser mein save hota hai, config.json mein nahi jata.</p>
+      <p class="note">The token is stored only in this browser and is never written to config.json.</p>
     </details>
     <h4>Backup</h4>
-    <button class="mini" data-a="dl">config.json download</button>
-    <label>config.json load karein<input type="file" accept=".json" data-a="import"></label>
-    <button class="mini" data-a="reset">Draft reset karein</button>`;
+    <button class="mini" data-a="dl">Download config.json</button>
+    <label>Load a config.json<input type="file" accept=".json" data-a="import"></label>
+    <button class="mini" data-a="reset">Reset draft</button>`;
   }
   build();
   function previewWA(){return fill(C.waTemplate,{orderId:"ORD-261120-4821",date:new Date().toLocaleString("en-PK",{dateStyle:"medium",timeStyle:"short"}),product:C.title,qty:2,price:rs(C.price),shipping:+C.shipping?rs(C.shipping):C.lFree,total:rs(C.price*2+ +C.shipping),payment:(C.payments.split(",")[0]||"").trim(),name:"Ali Raza",phone:"0300 1234567",city:"Lahore",address:"House 12, Street 5, Model Town"})}
   async function ghSave(){
     const m=$("ghmsg"),{owner,repo,branch,token}=GH,br=branch||"main";
-    if(!owner||!repo||!token){m.textContent="Pehle neeche GitHub connection bharein.";return}
-    m.textContent="Save ho raha hai…";
+    if(!owner||!repo||!token){m.textContent="Fill in the GitHub connection first (below).";return}
+    m.textContent="Saving…";
     const url=`https://api.github.com/repos/${owner}/${repo}/contents/config.json`,H={Authorization:"Bearer "+token,Accept:"application/vnd.github+json"};
     try{
       let sha;const g=await fetch(url+"?ref="+br,{headers:H});
@@ -327,46 +428,48 @@ function setupAdmin(){
       const body={message:"Update page settings",content:btoa(unescape(encodeURIComponent(JSON.stringify(C,null,2)))),branch:br};if(sha)body.sha=sha;
       const p=await fetch(url,{method:"PUT",headers:{...H,"Content-Type":"application/json"},body:JSON.stringify(body)});
       if(!p.ok)throw new Error(p.status);
-      m.textContent="✅ Save ho gaya! 1–2 minute mein sab ko nazar aayega.";
-    }catch(e){m.textContent="❌ Save nahi hua (error "+e.message+"). Username, repo ka naam aur token ki Contents permission check karein."}
+      m.textContent="✅ Saved! Everyone will see the new settings in 1–2 minutes.";
+    }catch(e){m.textContent="❌ Could not save (error "+e.message+"). Check the username, repository name and the token's Contents permission."}
   }
+  function resize(file,max,type,cb){const img=new Image();img.onload=()=>{const s=Math.min(1,max/Math.max(img.width,img.height)),c=document.createElement("canvas");c.width=img.width*s;c.height=img.height*s;c.getContext("2d").drawImage(img,0,0,c.width,c.height);cb(type==="png"?c.toDataURL("image/png"):c.toDataURL("image/jpeg",.82))};img.src=URL.createObjectURL(file)}
   P.addEventListener("input",e=>{
     const t=e.target;
-    if(t.dataset.k){const k=t.dataset.k;C[k]=t.type==="checkbox"?t.checked:t.type==="number"?Number(t.value):t.value}
-    else if(t.dataset.l){const v=t.value;C[t.dataset.l][t.dataset.i][t.dataset.j]=t.dataset.j==2&&t.dataset.l==="reviews"?+v:v}
+    if(t.dataset.k){const k=t.dataset.k;C[k]=t.type==="checkbox"?t.checked:(t.type==="number"||t.type==="range")?Number(t.value):t.value;if(t.type==="range"){const n=t.parentNode.firstChild;n.textContent=n.textContent.replace(/\d+px/,t.value+"px")}}
+    else if(t.dataset.im!==undefined){C.images[+t.dataset.im]=t.value}
+    else if(t.dataset.l){const x=t.value;C[t.dataset.l][t.dataset.i][t.dataset.j]=t.dataset.j==2&&t.dataset.l==="reviews"?+x:x}
     else if(t.dataset.g){GH[t.dataset.g]=t.value;try{localStorage.setItem("gh",JSON.stringify(GH))}catch(x){}return}
     else return;
     render();save();const pv=$("waPrev");if(pv)pv.textContent=previewWA();
   });
   P.addEventListener("change",e=>{
-    const t=e.target;
-    if(t.dataset.a==="upload"&&t.files[0]){
-      const img=new Image();img.onload=()=>{const s=Math.min(1,900/Math.max(img.width,img.height)),c=document.createElement("canvas");c.width=img.width*s;c.height=img.height*s;c.getContext("2d").drawImage(img,0,0,c.width,c.height);C.image=c.toDataURL("image/jpeg",.82);render();save();build()};
-      img.src=URL.createObjectURL(t.files[0]);
-    }
-    if(t.dataset.a==="import"&&t.files[0]){t.files[0].text().then(x=>{C={...DEFAULTS,...JSON.parse(x)};render();save();build()})}
+    const t=e.target,f=t.files&&t.files[0];if(!f)return;
+    if(t.dataset.a==="upim"){const i=+t.dataset.i;resize(f,900,"jpg",d=>{C.images[i]=d;gi=C.images.slice(0,i+1).filter(Boolean).length-1;render();save();build()})}
+    if(t.dataset.a==="logoup")resize(f,320,"png",d=>{C.logo=d;render();save();build()});
+    if(t.dataset.a==="import")f.text().then(x=>{C=norm(JSON.parse(x));render();save();build()});
   });
   P.addEventListener("click",e=>{
     const a=e.target.dataset.a,i=+e.target.dataset.i;if(!a)return;
     if(a==="close")P.classList.remove("open");
     if(a==="gh"){ghSave();return}
-    if(a==="urdu")Object.assign(C,URDU);
-    if(a==="theme"){C.theme=e.target.dataset.v;C.accent=C.accent2="";}
+    if(a==="copyjs"){navigator.clipboard&&navigator.clipboard.writeText(SHEET_SCRIPT);e.target.textContent="Copied ✓";return}
+    if(a==="theme"){C.theme=e.target.dataset.v;C.accent=C.accent2=""}
     if(a==="resetcolors")C.accent=C.accent2="";
-    if(a==="addf")C.features.push(["✨","Naya feature","Detail likhein"]);
+    if(a==="rmlogo")C.logo="";
+    if(a==="rmim")C.images[i]="";
+    if(a==="addf")C.features.push(["✨","New feature","Describe it here"]);
     if(a==="delf")C.features.splice(i,1);
-    if(a==="addr")C.reviews.push(["Naam, Shehr","Review likhein",5]);
+    if(a==="addr")C.reviews.push(["Name, City","Write the review here",5]);
     if(a==="delr")C.reviews.splice(i,1);
     if(a==="reset"){try{localStorage.removeItem("draftCfg")}catch(x){}location.reload();return}
     if(a==="dl"){const l=document.createElement("a");l.href=URL.createObjectURL(new Blob([JSON.stringify(C,null,2)],{type:"application/json"}));l.download="config.json";l.click();return}
-    if(["theme","resetcolors","addf","delf","addr","delr","urdu"].includes(a)){render();save();const sc=P.scrollTop;build();P.scrollTop=sc}
+    if(["theme","resetcolors","rmlogo","rmim","addf","delf","addr","delr"].includes(a)){render();save();const sc=P.scrollTop;build();P.scrollTop=sc}
   });
 }
 
-/* ===== START: DEFAULTS → config.json → (admin ka draft) ===== */
+/* ===== START: defaults → config.json → (admin draft) ===== */
 (async()=>{
-  try{const r=await fetch("config.json?v="+Date.now(),{cache:"no-store"});if(r.ok)C={...DEFAULTS,...await r.json()}}catch(e){}
-  if(ADMIN){try{const d=localStorage.getItem("draftCfg");if(d)C={...DEFAULTS,...JSON.parse(d)}}catch(e){}}
+  try{const r=await fetch("config.json?v="+Date.now(),{cache:"no-store"});if(r.ok)C=norm(await r.json())}catch(e){}
+  if(ADMIN){try{const d=localStorage.getItem("draftCfg");if(d)C=norm(JSON.parse(d))}catch(e){}}
   render();
   if(ADMIN)setupAdmin();
 })();
